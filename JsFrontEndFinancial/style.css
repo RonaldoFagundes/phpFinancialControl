@@ -1,0 +1,246 @@
+  * {
+      margin: 0%;
+      padding: 0%;
+  }
+
+  #container-header {
+      width: auto;
+      display: block;
+      background-color: #12154c;
+      padding: 10px;
+  }
+
+  #content-header {
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+      background-color: #090729;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 10px;
+
+  }
+
+  #info {
+      color: aqua;
+  }
+
+  #content-year,
+  #content-month,
+  #content-type,
+  #content-user {
+      width: 46%;
+      padding: 15px;
+      background-color: #09044b;
+      border-radius: 10px;
+  }
+
+
+
+ 
+
+
+
+
+  input[type="radio"] {
+      appearance: none;
+      /* Remove o estilo nativo do rádio */
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #007BFF;
+      /* Cor da borda */
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-right: 10px;
+      /* Espaço entre o rádio e o label */
+  }
+
+  input[type="radio"]:checked {
+      background-color: aqua;
+      /* Cor de fundo quando selecionado */
+      border-color: #04203d;
+      /* Cor da borda quando selecionado */
+  }
+
+  label:hover {
+      color: aqua;
+  }
+
+  input[type="radio"]:hover {
+      border-color: white;
+  }
+
+
+  label {
+      color: #eee8e8;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px 12px;
+      border: 1px solid aqua;
+      border-radius: 5px;
+      transition: background-color 0.3s, border-color 0.3s;
+      margin-bottom: 10px;
+  }
+
+
+  /* Estilizando o ícone */
+  label i,
+  label img {
+      width: 30px;
+      /* Define o tamanho do ícone */
+      height: auto;
+      margin-right: 10px;
+      /* Espaço entre o ícone e o texto */
+  }
+
+   #content-type>label{
+    width: 110px;
+    height: 80px;
+  }
+
+ #content-type>label>i{
+    width: 70px;
+    height: 40px;
+  }
+
+
+  
+
+  #select-user,
+  #select-month {
+      width: 30%;
+      font-family: 'Arial', sans-serif;
+      /* Tipo de fonte */
+      font-size: 12px;
+      /* Tamanho da fonte */
+      font-weight: bold;
+      /* Peso da fonte */
+      color: #333;
+      /* Cor do texto */
+      background-color: #f8f9fa;
+      /* Cor de fundo */
+      border: 1px solid #ced4da;
+      /* Borda */
+      padding: 10px;
+      /* Espaçamento interno */
+      border-radius: 5px;
+      /* Bordas arredondadas */
+      outline: none;
+      /* Retira o contorno padrão */
+  }
+
+
+  #select-user option,
+  #select-month option {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: #495057;
+  }
+
+  #select-user:hover,
+  #select-month:hover {
+      background-color: #e9ecef;
+  }
+
+  #select-month.current-month {
+      border: 2px solid aqua;
+      background-color: #09044b;
+      color: aqua;
+  }
+
+  #select-user.highlight-all {
+      border: 2px solid aqua;
+      background-color: #09044b;
+      color: aqua;
+  }
+
+  #content-btn {
+      width: auto;
+      display: flex;
+      background-color: #090729;
+      justify-content: space-around;
+      padding: 20px;
+      border-radius: 15px;
+  }
+
+
+  #btn-pdf {
+      padding: 14px;
+      border: 2px solid #177283;
+      border-radius: 8px;
+      background-color: #180e41;
+      color: aqua
+  }
+
+
+#container-list{
+    margin-bottom: 5px;
+}
+
+
+  /* table*/
+  #content-list {
+      text-align: center;
+      background-color: #180e41;
+      color: aqua;
+      font-size: 1.2rem;
+      /*padding: 20px;*/
+      
+  }
+
+  #title-list {
+      text-align: center;
+      background-color: #180e41;
+      color: aqua;
+      font-size: 1.2rem;
+  }
+
+  #field-expery {
+      text-transform: capitalize;
+  }
+
+  #container-table {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+    
+  }
+
+  #table-list {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #333;
+  }
+
+  #table-list th {
+      border: 1px solid #333;
+      padding: 2px;
+      text-align: center;
+  }
+
+  #table-list td {
+      border: 1px solid #333;
+      padding: 2px;
+  }
+
+
+
+
+
+  @media (max-width:440px) {
+
+      #select-user,
+      #select-month {
+          width: 90%;
+      }
+
+
+
+
+  }
