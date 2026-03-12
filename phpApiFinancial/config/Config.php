@@ -1,9 +1,9 @@
 <?php
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'db_financial_control');
-define('DB_USER', 'RFactory');
-define('DB_PASS', 'jH7&p_f7*1M');
+define('DB_HOST', '');
+define('DB_NAME', '');
+define('DB_USER', '');
+define('DB_PASS', '');
 
 function getDB() {    
     try {
