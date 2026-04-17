@@ -28,10 +28,7 @@ import Header from '../../components/Header';
 
 
 
-
-
 export default function CashPayment({ navigation }) {
-
 
 
 
@@ -43,17 +40,13 @@ export default function CashPayment({ navigation }) {
 
 
 
-
     useEffect(() => {
-
         getAmount();
-
     }, []);
 
 
 
     const [showAmount, setShowAmount] = useState(false);
-
 
     const [modalPost, setModalPost] = useState(false);
 
@@ -89,7 +82,6 @@ export default function CashPayment({ navigation }) {
     const [statusCheckBox, setStatusCheckBox] = useState(null);
 
 
-
     const selectStatus = (index, item) => {
 
         setStatusCheckBox(index);
@@ -109,9 +101,6 @@ export default function CashPayment({ navigation }) {
     }
 
 
-
-
-
     const [showProof, setShowProof] = useState(false);
 
     const [resultPost, setResultPost] = useState();
@@ -121,12 +110,7 @@ export default function CashPayment({ navigation }) {
     const [amount, setAmount] = useState();
 
 
-
-
-
-
     const safeCashMov = async () => {
-
 
         await fetch(endpoint + "?action=postCashMov", {
             method: 'POST',
@@ -140,20 +124,16 @@ export default function CashPayment({ navigation }) {
             .then((res) => res.json())
             .then(
                 (result) => {
-
                     console.log(result);
                     setResultPost(result);
                     cleanFields();
                     setModalPost(false);
                     proofPost();
 
-
                 })
             .catch(function (error) {
                 console.log('erro => ' + error.message);
             });
-
-
     }
 
 
@@ -174,7 +154,6 @@ export default function CashPayment({ navigation }) {
 
                     console.log(result);
 
-
                     {
                         result.map((item) => {
                             setProof(
@@ -190,7 +169,7 @@ export default function CashPayment({ navigation }) {
                             )
                         }
 
-                        )
+                       )
                     }
 
                     setShowProof(true);
@@ -200,53 +179,32 @@ export default function CashPayment({ navigation }) {
             .catch(function (error) {
                 console.log('erro => ' + error.message);
             });
-
     }
-
-
 
 
 
 
 
     const getAmount = async () => {
-
-         setAmount(27.75);
-
-         /*
-        await fetch(endpoint + "?action=cashAmount", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then((res) => res.json())
-            .then(
-                (result) => {
-
-                    console.log(result);
-
-                    setAmount(result);
-
-                })
-            .catch(function (error) {
-                console.log('erro => ' + error.message);
-            });
-        */
+        setAmount(27.75);
+        /*
+       await fetch(endpoint + "?action=cashAmount", {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json'
+           },
+       })
+           .then((res) => res.json())
+           .then(
+               (result) => {
+                   console.log(result);
+                   setAmount(result);
+               })
+           .catch(function (error) {
+               console.log('erro => ' + error.message);
+           });
+       */
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     const cleanFields = () => {
@@ -261,20 +219,15 @@ export default function CashPayment({ navigation }) {
                 cashMov, 'value': 0,
             }
         )
-
         setStatusCheckBox(null);
     }
 
 
 
     const backHome = () => {
-
         showProof ? setShowProof(false) : setShowProof(false);
         navigation.navigate("Home")
-
     }
-
-
 
 
 
@@ -306,7 +259,6 @@ export default function CashPayment({ navigation }) {
                 }
             </View>
 
-
             {
                 showProof
                     ?
@@ -335,7 +287,7 @@ export default function CashPayment({ navigation }) {
                             </Pressable>
                         </LinearGradient>
                     </View>
-            }          
+            }
 
             <LinearGradient colors={['#83838bff', '#20244bff']} style={styles.containerBtnFooter}>
                 <LinearGradient colors={['#08042F', '#413f56']} style={styles.boxBtn}>
@@ -353,9 +305,9 @@ export default function CashPayment({ navigation }) {
                         <Text style={styles.textBtn}>{`  Home`}</Text>
                     </Pressable>
                 </LinearGradient>
-            </LinearGradient>    
+            </LinearGradient>
 
-           
+
             <Modal
                 animationType='fade'
                 visible={modalPost}
@@ -399,7 +351,7 @@ export default function CashPayment({ navigation }) {
                                                             <MaterialCommunityIcons name="checkbox-blank-outline" size={24} color="white" />
                                                         </View>
 
-                         {/*   
+                                                        {/*   
                            <Text style={styles.textInfo}>{` index : ${index} -key  ${item.key}`}</Text>
                            <Text style={styles.textInfo}>{` index : ${index} -value  ${item.value}`}</Text>
                          */}
@@ -511,13 +463,7 @@ export default function CashPayment({ navigation }) {
 
             </Modal>
 
-
-
-
-
-
         </KeyboardAvoidingView>
-
     )
 
 }
