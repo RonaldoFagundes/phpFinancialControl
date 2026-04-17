@@ -9,21 +9,12 @@ export const AuthContext = createContext({});
 
 function AuthProvider({children}){ 
 
-
-//const endpoint = "http://localhost:3322/";
-
 const endpoint = "https://php-api-financial.vercel.app/api";
 
-//const [endpoint, setEndpoint] = useState("");
-
-  
 
   const [load, setLoad] = useState(true);
 
-
-  const [user, setUser] = useState("");
-
-  
+  const [user, setUser] = useState("");  
 
   const [bankData, setBankData] = useState([]); 
 
@@ -31,9 +22,7 @@ const endpoint = "https://php-api-financial.vercel.app/api";
 
   const [amountAccount, setAmountAccount] = useState();
 
-  const [creditCardData, setCreditCardData] = useState([]);
-
-  //const [transactionsType, setTransactionsType] = useState("");
+  const [creditCardData, setCreditCardData] = useState([]); 
 
 
   const [infoDate, setInfoDate] = useState({    
@@ -44,29 +33,24 @@ const endpoint = "https://php-api-financial.vercel.app/api";
     year:""
   });
 
-  /* use this to static api*/
+  
   const [accounts, setAccounts] = useState([]);
   const [reports, setReports] = useState([]);
   const [creditcard, setCreditCard] = useState([]);
   const [postCreditcard, setPostCreditcard] = useState([]);
 
 
- // const [idAccont , setIdAccount] = useState(0);
-
- 
 
     return(
         <AuthContext.Provider value={
              {
-              //endpointPhp,
-
+              
               setLoad,
               load,
 
               setUser,
               user, 
-
-             // setEndpoint,
+             
               endpoint, 
 
               setInfoDate,
@@ -92,10 +76,7 @@ const endpoint = "https://php-api-financial.vercel.app/api";
               amountAccount,
 
               setCreditCardData,
-              creditCardData, 
-
-             // setTransactionsType,
-             // transactionsType,              
+              creditCardData,                          
                                    
              }}>
           {children}
