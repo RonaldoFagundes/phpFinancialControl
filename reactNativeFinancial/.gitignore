@@ -35,5 +35,7 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-test/
+
 f_eas/
+
+phpApiFinancial/api/credencials.php
